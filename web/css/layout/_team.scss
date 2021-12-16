@@ -1,0 +1,110 @@
+.Team {
+  --offset: -30px;
+  background-color: #fff !important;
+  padding: 70px 0;
+  padding-bottom: 0;
+
+  h1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 25px;
+
+    .Custom-nav {
+      text-align: end;
+    }
+  }
+
+  @media screen and (max-width: 1450px) {
+    --offset: 0;
+  }
+
+  &__item {
+    background-color: #ffffff;
+    border: 1px solid rgba(92,92,91,0.15);
+    text-align: left;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 30px;
+    padding-left: 85px;
+    position: relative;
+    margin-left: 80px;
+    margin-bottom: 60px;
+
+    a {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    &__photo {
+      width: 120px !important;
+      height: 120px;
+      border-radius: 50%;
+      border: none;
+      display: inline-block !important;
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translate(0, -50%);
+      filter: drop-shadow(0px 10px 15px rgba(92,92,91,0.3));
+      background-color: $ACTIVE;
+    }
+
+    &__name {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    &__email {
+      font-size: 13px;
+      font-weight: 500;
+      color: $ACTIVE !important;
+    }
+
+    &__social-icons {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      background-color: $ACTIVE;
+      filter: drop-shadow(0px 10px 15px rgba(92,92,91,0.3));
+
+      * {
+        color: #fff !important;
+      }
+      
+    }
+  }
+
+  @include owlArrowsTwo(
+    $background: $SECONDARY,
+    $color: #fff,
+    $borderColor: $SECONDARY,
+    $offset: var(--offset)
+  );
+}
+
+.Supervisos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  margin-top: 50px;
+
+  @media (max-width: $MD) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .Team__item {
+    padding-left: 30px;
+    margin: 0;
+    display: flex;
+    grid-column-gap: 30px;
+    align-items: center;
+
+    &__photo {
+      position: static;
+      transform: none;
+    }
+  }
+}

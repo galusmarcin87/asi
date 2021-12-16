@@ -1,0 +1,227 @@
+.btn {
+  border: none;
+  border-radius: $RADIUS;
+  font-size: 0.9rem;
+  padding: 13px 15px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &--lowercase {
+    text-transform: initial;
+  }
+
+  &--transparent {
+    color: #fff !important;
+    border: 1px solid #58738f;
+  }
+
+  &--medium {
+    min-width: 210px;
+  }
+
+  &--arrow {
+    background-color: transparent;
+    color: $SECONDARY !important;
+    margin-top: 0 !important  ;
+    border-bottom: 1px solid $SECONDARY;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    > span {
+      padding-left: 15px;
+      font-size: 1.4em;
+    }
+
+    @media (max-width: $MD) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &--line-top {
+    border-top: 1px solid $SECONDARY_DARKEN_2 !important;
+    border-bottom: 1px solid $SECONDARY !important;
+  }
+}
+
+.btn-fb {
+  background: transparent;
+  color: #fff;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  > img {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    max-width: 20px;
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  span {
+    transform: skewX(-30deg);
+    border: 1px solid $FB;
+    background: $FB;
+    z-index: 0;
+    width: 60px !important
+  }
+}
+
+.btn-google {
+  background: transparent;
+  color: #fff;
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  > img {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    max-width: 20px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  span {
+    transform: skewX(-30deg);
+    border: 1px solid #d40000;
+    background: #d40000;
+    z-index: 0;
+    width: 60px !important
+  }
+}
+
+.btn-primary {
+  background: $PRIMARY;
+  border-radius: $RADIUS;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $PRIMARY_HOVER !important;
+  }
+}
+
+.btn-default {
+  background: #e7ebef;
+  color: $PRIMARY;
+}
+
+.btn-success {
+  background-color: rgb(18, 68, 111);
+  background: -moz-linear-gradient(
+    left,
+    rgba(18, 68, 111, 1) 0%,
+    rgba(26, 141, 199, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(18, 68, 111, 1) 0%,
+    rgba(26, 141, 199, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(18, 68, 111, 1) 0%,
+    rgba(26, 141, 199, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12446f', endColorstr='#1a8dc7',GradientType=1 );
+
+  border: none;
+  box-shadow: 0 5px 12px 0px #0000000d;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: linear-gradient(
+      to right,
+      rgba(18, 68, 111, 1) 0%,
+      rgba(18, 68, 111, 1) 100%
+    );
+    background: -moz-linear-gradient(
+      left,
+      rgba(18, 68, 111, 1) 0%,
+      rgba(18, 68, 111, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(18, 68, 111, 1) 0%,
+      rgba(18, 68, 111, 1) 100%
+    );
+    background-color: $PRIMARY !important;
+  }
+
+  &--outline {
+    text-transform: none;
+    background: transparent;
+    border-bottom: 1px solid $SECONDARY;
+  }
+
+  &--reverse-colors {
+    color: $SECONDARY;
+    box-shadow: none;
+    border-bottom: 1px solid $SECONDARY;
+  }
+
+  &--line-bottom {
+    border-bottom: 2px solid $SECONDARY_DARKEN_2;
+  }
+}
+
+.btn-big {
+  padding: 25px 55px;
+}
+
+.btn {
+  outline: none;
+
+  > span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.btn-link {
+  color: $SECONDARY !important;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.btn-orange {
+  text-align: center;
+  color: #fff;
+  min-width: 105px;
+  background: transparent;
+  padding-left: 55px;
+  padding-right: 55px;
+  z-index: 0;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+
+  &:hover {
+    color: #fff;
+  }
+
+  > span {
+    transform: skewX(-25deg);
+    border: 1px solid $SECONDARY;
+    background: $SECONDARY;
+    z-index: -1;
+  }
+
+  &.btn-revert {
+    > span {
+      background-color: #575757 !important;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@mixin icon($color, $content) {
+  content: $content;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'FontAwesome';
+  color: $color;
+  pointer-events: none;
+}
+
+@mixin hrLineLeft($color) {
+  &::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: $color;
+    position: absolute;
+    left: 0;
+    top: 70%;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin owlArrows(
+  $background: $COLOR_1,
+  $color: $PRIMARY,
+  $offset: 7vw,
+  $borderColor: $COLOR_10
+) {
+  .owl-nav {
+    > button {
+      width: 40px;
+      height: 40px;
+      border-radius: $RADIUS;
+      background: $background !important;
+      color: $color !important;
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%;
+      outline: none !important;
+      border-bottom: 2px solid $borderColor !important;
+
+      > span {
+        font-size: 24px;
+      }
+
+      &.owl-prev {
+        left: $offset;
+      }
+
+      &.owl-next {
+        right: $offset;
+      }
+    }
+  }
+}
+
+@mixin owlArrowsTwo(
+  $background: $SECONDARY,
+  $color: $PRIMARY,
+  $offset: -30px,
+  $borderColor: $COLOR_10
+) {
+  .owl-nav,
+  .Custom-nav {
+    --size: 60px;
+
+    @media (max-width: $TABLET) {
+      font-size: 16px;
+    }
+
+    > button {
+      width: var(--size);
+      height: var(--size);
+      background: $background !important;
+      color: $color !important;
+      outline: none !important;
+      border: none;
+      font-size: 20px !important;
+      padding-bottom: 4px;
+      position: relative;
+      transform: skewX(-25deg);
+
+      > span {
+        font-size: 24px;
+      }
+
+      &.owl-prev {
+        background-color: #fff !important;
+        color: $SECONDARY !important;
+
+        &:after, &:before {
+          border-color: #fff !important;
+        }
+      }
+    }
+
+    &--grey {
+       > button {
+          &.owl-prev {
+            background-color: #f5f5f5 !important;
+  
+            &:after, &:before {
+              border-color: #f5f5f5 !important;
+            }
+          }
+       }
+    }
+  }
+}

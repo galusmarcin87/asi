@@ -1,0 +1,58 @@
+.Partners {
+  background-color: $COLOR_3 !important;
+
+  h1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 25px;
+
+    .Custom-nav {
+      text-align: end;
+    }
+  }
+
+  &__carousel {
+    margin: 25px 0;
+    --offset: -30px;
+
+    @media (max-width: $TABLET) {
+      --offset: 0;
+    }
+  }
+
+  @include owlArrowsTwo(
+    $background: $SECONDARY,
+    $color: #fff,
+    $borderColor: $SECONDARY,
+    $offset: var(--offset)
+  );
+
+  .owl-stage {
+    margin: 25px 0;
+  }
+
+  &__item {
+    padding: 35px 50px;
+    filter: drop-shadow(0px 15px 15px rgba(92,92,91,0.1));
+    box-shadow: 0px 5px 4px 3px #e4e4e42e;
+
+    &:hover {
+      box-shadow: 0px 5px 4px 3px rgba(34,167,64,0.05);
+    }
+
+    &__link {
+      &__logo {
+        width: 100%;
+        height: auto;
+        fill: $COLOR_11;
+        filter: grayscale(1);
+        opacity: 0.4;
+
+        &:hover {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

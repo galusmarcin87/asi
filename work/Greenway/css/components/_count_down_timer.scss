@@ -1,0 +1,20 @@
+.Count-down-timer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  > div {
+    font-size: 11px;
+    color: #5c5c5b;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    span {
+      font-size: 30px;
+      color: #5c5c5b;
+      display: block;
+      line-height: 1;
+      font-weight: 300;
+    }
+  }
+}

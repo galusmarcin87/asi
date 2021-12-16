@@ -1,0 +1,51 @@
+.Social-icons {
+  display: inline-flex;
+  vertical-align: middle;
+  grid-column-gap: 20px;
+
+  &__icon {
+    cursor: pointer;
+    width: 20px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    .fa {
+      color: $COLOR_1;
+      font-size: 24px;
+    }
+
+    &__img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $MD) {
+    grid-column-start: 1;
+  }
+}
+
+.Socials-box {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  background-color: #f5f5f5;
+  z-index: 9;
+
+  &__icon {
+    color: #292929;
+    padding: 10px 15px;
+    font-size: 24px;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      color: $SECONDARY;
+
+      .fa {
+        color: $SECONDARY;
+      }
+    }
+  }
+}
