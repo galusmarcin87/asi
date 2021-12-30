@@ -12,6 +12,35 @@ if (!$slider) {
 }
 ?>
 
+<section class="main-slider-wrapper">
+    <div class="container">
+        <div id="MAIN-SLIDER" class="owl-carousel owl-theme">
+            <? foreach ($slider->slides as $slide): ?>
+            <div class="main-slider item">
+                <div class="main-slider__content">
+                    <h1>
+                        <strong><?= $slide->header ?></strong><br />
+                        <?= $slide->subheader ?>
+                    </h1>
+                    <a href="<?= $slide->link ?>" class="btn btn--primary">
+                        <?= $slide->body ?>
+                    </a>
+                    <a href="#NEWSLETTER" class="btn btn--secondary">
+                        <?= Yii::t('db', 'Subscribe to the newsletter') ?>
+                    </a>
+                </div>
+                <div class="main-slider__images">
+                    <?if($slide->file && $slide->file->isImage()):?>
+                        <img src="<?= $slide->file->getImageSrc(750)?>" alt="" />
+                    <? endif ?>
+
+                </div>
+            </div>
+            <? endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <section class="Slider">
     <div class="owl-carousel owl-theme">
 
