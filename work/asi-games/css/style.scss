@@ -1,0 +1,255 @@
+@import './variables';
+
+//layout
+@import './layouts/footer';
+@import './layouts/section';
+@import './layouts/numbers';
+@import './layouts/main-slider';
+@import './layouts/service';
+@import './layouts/login';
+@import './layouts/register';
+@import './layouts/newsletter';
+@import './layouts/projects';
+@import './layouts/roadmap';
+@import './layouts/partners';
+@import './layouts/team';
+@import './layouts/faq';
+@import './layouts/buy-tokens';
+@import './layouts/contact';
+@import './layouts/about';
+
+//components
+@import './components/menu';
+@import './components/buttons';
+@import './components/selects';
+@import './components/social-icons';
+@import './components/list';
+@import './components/person';
+@import './components/badge';
+@import './components/pagination';
+@import './components/breadcrumb';
+@import './components/rating';
+@import './components/contact-box';
+@import './components/form';
+@import './components/table';
+@import './components/cookies';
+@import './components/global';
+@import './components/count_down_timer';
+@import './components/invest_counter';
+@import './components/banner';
+@import './components/files';
+
+html {
+  box-sizing: border-box;
+  color: #4b4044;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media (min-width: $SM) {
+    padding: 0 15px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #4b4044;
+
+  &:hover,
+  &:active {
+    color: $PRIMARY;
+    text-decoration: underline;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #4b4044;
+  background-color: #f5f4fb;
+}
+
+h1 {
+  font-size: 40px;
+  color: #4b4044;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+
+  @media (min-width: $LG) {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  strong {
+    color: $PRIMARY;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  color: $SECONDARY;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+
+  > div {
+    color: $PRIMARY;
+  }
+
+  @media (min-width: $LG) {
+    font-size: 30px;
+  }
+
+  &.big {
+    font-weight: 800;
+    letter-spacing: 10px;
+    font-size: 40px;
+
+    @media (min-width: $LG) {
+      font-size: 50px;
+    }
+  }
+}
+
+h3 {
+  font-size: 30px;
+  color: #4b4044;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: 10px;
+  line-height: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  @media (min-width: $XS) {
+    display: flex;
+    flex-grow: 1;
+    flex: 1 1 0;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  @media (min-width: $TABLET) {
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.hr {
+  margin: 20px 0;
+  border-bottom: 1px solid #d3d0d6;
+  max-width: 210px;
+}
+
+.highlighted {
+  color: $SECONDARY;
+  font-weight: bold;
+}
+
+.no-bg {
+  background: transparent;
+}
+
+.no-pd {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0 !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+p {
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.lowercase {
+  text-transform: unset !important;
+}
+
+.yellow {
+  color: $PRIMARY !important;
+}

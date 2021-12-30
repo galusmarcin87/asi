@@ -1,0 +1,53 @@
+.files {
+  display: flex;
+  margin: 75px 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 1 1 0;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  @media (min-width: $LG) {
+    justify-content: space-between;
+  }
+}
+
+.file {
+  border-radius: 10px;
+  background: $PRIMARY;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #01002d !important;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 0 15px;
+  height: 80px;
+  grid-column-gap: 20px;
+  flex-basis: 100%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+    background: $SECONDARY;
+  }
+
+  @media (min-width: $TABLET) {
+    flex-basis: calc(50% - 20px);
+  }
+
+  @media (min-width: $LG) {
+    flex-basis: calc(25% - 20px);
+  }
+
+  &__ico {
+    width: 30px;
+  }
+
+  &--active {
+    background: $SECONDARY;
+  }
+}

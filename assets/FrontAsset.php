@@ -21,18 +21,19 @@ class FrontAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/animations.css',
+        'css/owl.carousel.min.css',
+        'css/animate.min.css',
+        'css/magnific-popup.min.css',
+        'css/font-awesome.min.css',
         'css/style.css',
         'less/front.less',
     ];
     public $js = [
-        'js/popper.min.js',
-        'js/bootstrap.min.js',
-        'js/jquery.magnific-popup.min.js',
         'js/owl.carousel.min.js',
+        'js/jquery.magnific-popup.min.js',
         'js/jquery.viewportchecker.min.js',
         'js/jquery.countTo.js',
-        '/js/scriprs.js',
+        'js/main.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset'

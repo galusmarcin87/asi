@@ -1,0 +1,40 @@
+.person {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 400;
+  font-style: italic;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-column-gap: 20px;
+  align-items: center;
+
+  > div {
+    display: grid;
+    align-items: center;
+  }
+
+  &--big {
+    font-size: 24px;
+    grid-template-columns: 70px auto;
+  }
+
+  &__avatar {
+    width: 100px;
+
+    &--small {
+      width: 70px;
+    }
+  }
+
+  &__role {
+    font-size: 14px;
+    font-style: italic;
+    color: #c8c8c8;
+
+    &--normal {
+      font-size: 17px;
+      font-style: normal;
+    }
+  }
+}

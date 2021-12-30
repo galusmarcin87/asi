@@ -1,0 +1,143 @@
+.menu-wrapper {
+  background: #020029;
+  z-index: 9;
+  position: relative;
+}
+
+.menu {
+  padding: 10px 0;
+  display: flex;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  justify-content: left;
+
+  > div {
+    order: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $PRIMARY;
+    font-size: 24px;
+    cursor: pointer;
+
+    @media (min-width: $MD) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $SM) {
+    padding: 15px 0;
+  }
+
+  @media (min-width: $MD) {
+    padding: 25px 0;
+    grid-column-gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $SM) {
+    .language-select {
+      position: static;
+    }
+
+    .arr-down {
+      font-size: 12px;
+    }
+  }
+
+  &__logo {
+    max-width: 100px;
+    vertical-align: middle;
+
+    @media (min-width: $XS) {
+      min-width: 120px;
+      max-width: 150px;
+    }
+
+    @media (min-width: $SM) {
+      min-width: 120px;
+      max-width: 100%;
+    }
+  }
+
+  .btn {
+    min-width: unset;
+    height: 40px;
+
+    @media (max-width: $SM) {
+      padding: 5px;
+      font-size: 12px;
+      height: 30px;
+    }
+
+    @media (max-width: $XS) {
+      padding: 0;
+      font-size: 10px;
+      height: 25px;
+    }
+  }
+
+  &__list {
+    display: none;
+    grid-column-gap: 20px;
+    order: 5;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    right: 0;
+    overflow: auto;
+
+    @media (min-width: $MD) {
+      display: flex;
+    }
+
+    @media (min-width: $LG) {
+      order: 0;
+      position: static;
+      overflow: unset;
+      grid-column-gap: 2vw;
+    }
+
+    &--open {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      background: #010026db;
+      text-align: center;
+      grid-auto-rows: min-content;
+      justify-content: center;
+      align-content: center;
+      grid-row-gap: 20px;
+
+      a {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+
+    &--active {
+      color: $PRIMARY;
+    }
+  }
+
+  &__toggle {
+    color: $PRIMARY;
+    font-size: 24px;
+
+    @media (min-width: $MD) {
+      display: none;
+    }
+  }
+}

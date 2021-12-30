@@ -1,0 +1,160 @@
+.team-wrapper {
+  background-size: cover;
+  background-position: center;
+  background-color: #020029;
+
+  &--wide {
+    .team {
+      border: none;
+      padding: 0;
+      background: none;
+
+      &__carousel {
+        padding-right: 0 !important;
+      }
+    }
+
+    .owl-nav {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 10px;
+
+      @media (min-width: $SM) {
+        padding: 0 15px;
+      }
+
+      .owl-next {
+        margin-right: 10px !important;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 75px;
+    margin-top: 20px;
+  }
+}
+
+.team {
+  border-radius: 10px;
+  background-color: #010026;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+
+  @media (min-width: $MD) {
+    padding: 45px;
+  }
+
+  &__carousel {
+    position: relative;
+
+    @media (min-width: $MD) {
+      padding: 0 100px;
+    }
+
+    @media (min-width: $TABLET) {
+      padding: 0 150px;
+    }
+
+    .owl-nav {
+      text-align: center;
+      margin-top: 50px;
+
+      @media (min-width: $MD) {
+        position: absolute;
+        top: 50%;
+        left: -100px;
+        right: 0;
+        transform: translate(0, -50%);
+        text-align: unset;
+        margin-top: 0;
+      }
+
+      @media (min-width: $TABLET) {
+        left: -150px;
+      }
+
+      .owl-next {
+        @media (min-width: $MD) {
+          float: right;
+          margin-right: -100px;
+        }
+
+        @media (min-width: $TABLET) {
+          margin-right: -150px;
+        }
+      }
+    }
+
+    .owl-item:not(.active) {
+      opacity: 0.3;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-row-gap: 35px;
+    width: 300px;
+
+    @media (min-width: $SM) {
+      width: 370px;
+    }
+
+    &--center {
+      margin: 0 auto;
+    }
+
+    &__ico {
+      max-width: 55px;
+    }
+
+    &--v2 {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      grid-column-gap: 20px;
+      width: auto;
+      max-width: 550px;
+      padding: 60px 0;
+
+      > div {
+        display: grid;
+        grid-row-gap: 20px;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 122px !important;
+  }
+
+  &__header {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  &__role {
+    font-size: 15px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__icons {
+    justify-self: flex-start !important;
+
+    .social-icons__icon {
+      width: 24px;
+    }
+  }
+}

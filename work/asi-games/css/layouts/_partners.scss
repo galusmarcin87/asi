@@ -1,0 +1,40 @@
+.partners-wrapper {
+  background-color: #010029;
+  padding: 75px 0;
+
+  h2 {
+    margin-bottom: 75px;
+  }
+}
+
+.partners {
+  padding: 0 100px;
+  position: relative;
+
+  @media (min-width: $TABLET) {
+    padding: 0 150px;
+  }
+
+  &__item {
+    opacity: 0.6;
+    padding: 10px;
+
+    @media (min-width: $TABLET) {
+      padding: 40px;
+      border-right: 1px solid #343354;
+      border-left: 1px solid #343354;
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+
+    .owl-next {
+      float: right;
+    }
+  }
+}

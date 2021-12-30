@@ -13,6 +13,68 @@ $isHomePage = $this->context->id == 'site' && $this->context->action->id == 'ind
 $menu = new NobleMenu(['name' => 'header_' . Yii::$app->language, 'loginLink' => false]);
 
 ?>
+<div class="menu-wrapper">
+    <div class="container">
+        <div class="menu">
+            <a href="./index.html">
+                <img class="menu__logo" src="./img/Logo.png" alt="" />
+            </a>
+            <ul class="menu__list">
+                <li class="menu__list__item">
+                    <a class="menu__link menu__link--active" href="index.html"
+                    >HOME</a
+                    >
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="o-nas.html">O NAS</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="projekty.html">PROJEKTY</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="tekstowa.html">TOKENY</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="tekstowa.html">ROADMAP</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="tekstowa.html">CHCESZ ZAINWESTOWAĆ</a>
+                </li>
+                <li class="menu__list__item">
+                    <a class="menu__link" href="kontakt.html">KONTAKT</a>
+                </li>
+                <li id="MENU_CLOSE" class="menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </li>
+            </ul>
+            <div>
+                <a class="btn btn--primary" href="./login.html">Logowanie</a>
+            </div>
+            <div>
+                <div class="arr-down">
+                    WHITEPAPER
+                    <div class="dropdown">
+                        <a href="#">Wicej o MFT</a>
+                        <a href="#">Dla inwestorów</a>
+                        <a href="#">Produkty w promocji</a>
+                        <a href="#">Jak kupić reklam?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="language-select">
+                PL
+                <div class="dropdown">
+                    <div class="language-select__selected-lang">EN</div>
+                    <div class="language-select__selected-lang">FR</div>
+                </div>
+            </div>
+            <a id="MENU_TOGGLE" class="menu__toggle" href="#">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
 
 <div class="Menu-top-wrapper">
     <div id="nav-container" class="Menu-top">

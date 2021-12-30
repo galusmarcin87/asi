@@ -1,0 +1,124 @@
+.footer-wrapper {
+  background: #00000f;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 210px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -210px;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-color: #01003c;
+    z-index: -1;
+  }
+
+  &--dark {
+    &::before {
+      background-color: #010026;
+    }
+  }
+
+  &--single {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  a:not(.btn) {
+    color: inherit;
+    font-weight: 500;
+
+    &:hover {
+      color: $PRIMARY;
+      text-decoration: underline;
+    }
+  }
+
+  .newsletter {
+    margin-top: -205px;
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+
+  p {
+    font-weight: 500;
+  }
+
+  @media (min-width: $MD) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $TABLET) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $LG) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: $LG) {
+    .social-icons {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copy {
+    display: grid;
+    margin-top: 35px;
+    border-top: 1px solid #33333f;
+    padding-top: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media (min-width: $TABLET) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__realization {
+    @media (min-width: $TABLET) {
+      text-align: right;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    grid-column-gap: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-flow: row wrap;
+
+    &--block {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    &__link {
+      &--active {
+        color: $PRIMARY !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}

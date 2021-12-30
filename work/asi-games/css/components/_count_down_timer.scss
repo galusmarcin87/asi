@@ -1,0 +1,27 @@
+.Count-down-timer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  > div {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $TABLET) {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: #ffffff;
+      font-weight: 700;
+
+      @media (min-width: $TABLET) {
+        font-size: 20px;
+      }
+    }
+  }
+}

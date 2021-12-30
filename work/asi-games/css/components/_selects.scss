@@ -1,0 +1,107 @@
+.language-select {
+  align-items: center;
+  display: inline-grid;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  grid-template-columns: auto auto;
+  align-content: center;
+  grid-column-gap: 5px;
+  position: relative;
+  order: 1;
+  grid-area: none;
+  justify-self: flex-end;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media (min-width: $SM) {
+    order: 0;
+    grid-area: unset;
+    width: 60px;
+    height: unset;
+  }
+
+  @media (min-width: $LG) {
+    margin-left: 10px;
+  }
+
+  &::after {
+    content: '\f078';
+    color: $PRIMARY;
+    font-size: 10px;
+    line-height: 20px;
+    font-family: FontAwesome;
+  }
+
+  &__selected-lang {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown {
+    margin-top: 5px;
+    grid-row-gap: 10px;
+    top: 100%;
+    padding: 10px;
+  }
+}
+
+.dropdown {
+  background-color: #01002a;
+  border-radius: 5px;
+  position: absolute;
+  padding: 15px;
+  display: none;
+  grid-row-gap: 15px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 2;
+  right: 0;
+
+  a {
+    color: #fff;
+    text-decoration: none !important;
+  }
+
+  @media (min-width: $SM) {
+    padding: 30px;
+    font-size: 16px;
+  }
+
+  &--open {
+    display: grid;
+  }
+}
+
+.arr-down {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &::after {
+    content: '\f078';
+    color: $PRIMARY;
+    font-size: 10px;
+    font-family: FontAwesome;
+    margin-left: 9px;
+  }
+
+  &:hover {
+    .dropdown {
+      display: grid;
+    }
+  }
+
+  .dropdown {
+    white-space: nowrap;
+    text-align: left;
+    z-index: -1;
+  }
+}

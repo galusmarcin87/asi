@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 104" width="102" height="104">
+	<title>Znacznik wyboru 1146</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #08bfff } 
+		.shp1 { fill: #010033 } 
+	</style>
+	<path id="Elipsa 1146" class="shp0" d="M51 2C78.61 2 101 24.39 101 52C101 79.61 78.61 102 51 102C23.39 102 1 79.61 1 52C1 24.39 23.39 2 51 2Z" />
+	<path id="Znacznik wyboru 1146" class="shp1" d="M40.19 50.43L45.61 61.22C45.61 61.22 54.42 39.3 68.32 32C67.98 37.22 66.63 41.74 69 47.3C62.9 48.7 50.36 64.35 46.29 72C40.53 64.7 33.75 59.13 29 57.39L40.19 50.43Z" />
+</svg>

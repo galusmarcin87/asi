@@ -1,0 +1,155 @@
+.buy-tokens-wrapper {
+  background-position: top right;
+  margin-top: 80px;
+  padding-bottom: 75px;
+}
+
+.buy-tokens {
+  border-radius: 10px;
+  background-color: #08bfff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 0 20px;
+
+  @media (min-width: $TABLET) {
+    padding: 45px;
+  }
+
+  @media (min-width: $LG) {
+    margin: 0 150px;
+  }
+
+  h2 {
+    color: #010026;
+    font-size: 30px;
+    line-height: 40px;
+    color: #010026;
+    font-weight: 700;
+    letter-spacing: unset;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(1, 0, 38, 0.7);
+    font-weight: 500;
+  }
+
+  .btn {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #010026;
+    font-weight: 600;
+    padding: 0 25px;
+  }
+
+  &--dark {
+    background-color: #010026;
+    color: $PRIMARY;
+    margin: 75px 0;
+
+    h2 {
+      color: $PRIMARY;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .token__desc {
+      background-color: #1b1a3c;
+
+      > div > div:last-child {
+        color: #fff;
+      }
+    }
+
+    .Invest-counter__body {
+      background-color: #1b1a3c;
+    }
+
+    .Invest-counter__value-line {
+      background: $SECONDARY;
+    }
+
+    .Invest-counter__value-line-wrapper {
+      background-color: #1b1a3c;
+    }
+
+    .Invest-counter__source {
+      color: $SECONDARY;
+
+      > div {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.token {
+  grid-column-gap: 25px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  @media (min-width: $TABLET) {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+  }
+
+  @media (min-width: $TABLET) {
+    grid-column-gap: 50px;
+  }
+
+  &__desc {
+    border-radius: 10px;
+    background-color: #0685bd;
+    padding: 30px;
+    display: grid;
+    grid-row-gap: 25px;
+    text-align: left;
+
+    > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 600;
+
+      > div:last-child {
+        color: #010026;
+      }
+    }
+  }
+
+  &__countdown {
+    &__icons {
+      text-align: left;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-flex;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    &__desc {
+      display: inline-flex;
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 36px;
+      color: #ffffff;
+      font-weight: 700;
+
+      &--margin {
+        margin-right: 50px;
+      }
+    }
+  }
+}

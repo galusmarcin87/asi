@@ -1,0 +1,36 @@
+.breadcrumb {
+  font-size: 20px;
+  letter-spacing: 10px;
+  line-height: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 35px 0;
+  text-transform: uppercase;
+
+  a,
+  div {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+
+    &::after {
+      content: '/';
+    }
+
+    &:last-of-type {
+      &::after {
+        color: #fff;
+      }
+    }
+  }
+
+  span {
+    color: #fff;
+  }
+}

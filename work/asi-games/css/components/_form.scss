@@ -1,0 +1,262 @@
+.contact-form {
+  padding: 20px;
+  background-image: none;
+
+  @media (min-width: $TABLET) {
+    padding-right: 40%;
+    padding: 50px;
+    background-size: cover;
+    background-position: center right;
+  }
+
+  &__header {
+    font-size: 30px;
+    letter-spacing: 6px;
+    color: #020036;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+
+    label {
+      color: #02003694 !important;
+      display: block;
+    }
+  }
+
+  .btn--block {
+    max-width: 460px;
+    margin-top: 10px !important;
+    margin-bottom: 0;
+  }
+
+  .flex {
+    @media (max-width: $SM) {
+      display: block;
+    }
+  }
+}
+
+form {
+  .label {
+    font-size: 16px;
+    color: #020036;
+    font-weight: 600;
+    display: block;
+
+    > span {
+      padding-left: 25px;
+    }
+
+    .input {
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #020036;
+    font-weight: 500;
+  }
+
+  strong {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #010026;
+    font-weight: 600;
+  }
+
+  .btn {
+    min-width: 120px;
+    justify-content: center;
+  }
+}
+
+.socials-login {
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+.input {
+  border-radius: 35px;
+  background-color: #0799d4;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  outline: none !important;
+  padding: 0 25px;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
+textarea.input {
+  height: 150px;
+  line-height: 1;
+  text-align: left;
+  padding: 25px;
+}
+
+.input-textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+  &:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  + label {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: #6856c5;
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: '...';
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      background: #53459e;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+.checkbox {
+  display: none;
+
+  + label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: #020036;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      border: 1px solid #010026;
+      position: absolute;
+      left: 0;
+      top: -1px;
+      border-radius: 4px;
+    }
+  }
+
+  &:checked {
+    + label {
+      &::after {
+        content: '\2713';
+        color: #010026;
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+        line-height: 22px;
+        position: absolute;
+        left: 5px;
+        top: 0;
+      }
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 25px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      &:before {
+        transform: translateX(30px);
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &.round {
+      border-radius: 34px;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 2px;
+      background-color: $PRIMARY;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}

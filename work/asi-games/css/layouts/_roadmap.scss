@@ -1,0 +1,47 @@
+.roadmap-wrapper {
+  background-image: linear-gradient(130deg, #01003d 0%, #010025 100%);
+
+  h2 {
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+}
+
+.roadmap {
+  .owl-nav {
+    margin-top: 75px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .owl-item:not(.active.center) {
+    opacity: 0.3;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    display: grid;
+    grid-row-gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #010026;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+
+    @media (min-width: $SM) {
+      padding: 37px;
+    }
+
+    &__check {
+      font-size: 14px;
+      line-height: 20px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.banner {
+  border-radius: 10px;
+  background-color: $PRIMARY;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  margin: 70px auto;
+  max-width: 1330px;
+  padding: 50px;
+  display: grid;
+  grid-row-gap: 40px;
+
+  @media (min-width: $TABLET) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+
+  &__header {
+    font-size: 30px;
+    line-height: 40px;
+    color: #010026;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 26px;
+    color: #010026;
+    font-weight: 500;
+  }
+
+  .btn {
+    align-self: center;
+  }
+
+  > div:last-child {
+    align-content: center;
+    display: inline-flex;
+    justify-content: center;
+  }
+}

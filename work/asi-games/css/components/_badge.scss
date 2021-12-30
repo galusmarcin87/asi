@@ -1,0 +1,56 @@
+.badge {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #01003a !important;
+  font-weight: 800;
+  background-color: #08bfff;
+  border-radius: 25px;
+  height: 50px;
+  display: inline-flex;
+  padding: 0 25px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #08bfff;
+  margin: 0 10px;
+  text-decoration: none !important;
+
+  &--reverse {
+    color: #08bfff !important;
+    background: transparent;
+    border-color: #4d4c67;
+  }
+
+  &--light {
+    border-radius: 10px;
+    background-color: #032656;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    justify-content: left;
+    margin-top: 20px;
+  }
+
+  &--lighteen {
+    border-radius: 10px;
+    background-color: #343355;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    justify-content: left;
+    margin-top: 20px;
+  }
+
+  + .badge {
+    @media (max-width: $SM) {
+      margin-top: 20px;
+    }
+  }
+}
