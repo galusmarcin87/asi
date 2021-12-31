@@ -25,24 +25,6 @@ foreach ($tabsStatuses as $status) {
 
 ?>
 
-<style>
-    .Projects__sortable {
-        --gap: 30px;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: var(--gap);
-        grid-row-gap: 45px;
-        margin-top: 25px;
-    }
-
-    @media (max-width: 768px) {
-        .Projects__sortable {
-            display: block;
-        }
-    }
-</style>
 <?php
 
 $provider = $projectSearch->search([], [Project::STATUS_ACTIVE,Project::STATUS_PLANNED]);
@@ -50,8 +32,8 @@ $provider->pagination = false;
 $provider->query->limit(3);
 echo ListView::widget([
     'dataProvider' => $provider,
-    'options' => ['class' => 'Projects__sortable '],
-    'itemOptions' => ['class' => 'Projects__card item'],
+    'options' => ['class' => 'projects '],
+    'itemOptions' => ['class' => 'project'],
     'emptyTextOptions' => ['class' => 'col-md-12'],
     'layout' => '{items}',
     'itemView' => function ($model, $key, $index, $widget) {

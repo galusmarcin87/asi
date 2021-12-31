@@ -62,10 +62,11 @@ class Project extends \app\models\mgcms\db\AbstractRecord
     public $languageAttributes = ['name', 'lead', 'text', 'text2', 'buy_token_info'];
     public $downloadFiles;
 
+    const STATUS_MAIN = 0;
     const STATUS_ACTIVE = 1;
     const STATUS_ENDED = 2;
     const STATUS_PLANNED = 3;
-    const STATUSES = [self::STATUS_ACTIVE => 'aktywny', self::STATUS_ENDED => 'zakończony', self::STATUS_PLANNED => 'zaplanowany'];
+    const STATUSES = [self::STATUS_MAIN => 'główny', self::STATUS_ACTIVE => 'aktywny', self::STATUS_ENDED => 'zakończony', self::STATUS_PLANNED => 'zaplanowany'];
     const STATUSES_EN = [self::STATUS_ACTIVE => 'Current', self::STATUS_ENDED => 'Ended', self::STATUS_PLANNED => 'Planned'];
 
     /**
@@ -74,11 +75,11 @@ class Project extends \app\models\mgcms\db\AbstractRecord
     public function rules()
     {
         return [
-            [['name', 'file_id', 'pay_name', 'iban','pay_description'], 'required'],
+            [['name', 'file_id'], 'required'],
             [['gps_lat', 'gps_long', 'money', 'money_full', 'percentage', 'percentage_presale_bonus'], 'number'],
             [['lead', 'text', 'text2', 'buy_token_info', 'fiber_collect_id','iban','pay_description','pay_name'], 'string'],
             [['file_id', 'token_value', 'token_to_sale', 'token_minimal_buy', 'token_left', 'flag_id', 'created_by', 'value'], 'integer'],
-            [['date_presale_start', 'date_presale_end', 'date_crowdsale_start', 'date_crowdsale_end', 'date_realization_profit'], 'safe'],
+            [['date_presale_start', 'date_presale_end', 'date_crowdsale_start', 'date_crowdsale_end', 'date_realization_profit', 'pay_name', 'iban','pay_description'], 'safe'],
             [['name', 'localization', 'whitepaper', 'www', 'token_blockchain'], 'string', 'max' => 245],
             [['status', 'investition_time', 'token_currency'], 'string', 'max' => 45]
         ];

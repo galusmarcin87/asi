@@ -237,4 +237,8 @@ class AbstractRecord extends \yii\db\ActiveRecord
             }
         }
     }
+
+    public function getImageFileSrc($width = false, $height = false, $mode = \Imagine\Image\ManipulatorInterface::THUMBNAIL_OUTBOUND){
+        return $this->file && $this->file->isImage() ? $this->file->getImageSrc($width, $height, $mode) : false;
+    }
 }

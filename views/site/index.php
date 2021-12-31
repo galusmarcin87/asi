@@ -8,3 +8,16 @@ use app\models\mgcms\db\Project;
 ?>
 
 <?= $this->render('index/slider') ?>
+
+<section class="projects-wrapper">
+    <div class="container">
+        <h2 class="text-center"><?= Yii::t('db', 'Current projects'); ?></h2>
+        <?= $this->render('/common/projects') ?>
+    </div>
+    <div class="text-center">
+        <a class="btn btn--secondary btn--primary-color" href="<?= \yii\helpers\Url::to('project/index') ?>">
+            <?= Yii::t('db', 'See all') ?>
+        </a>
+    </div>
+    <?= $this->render('index/byyTokens') ?>
+</section>
