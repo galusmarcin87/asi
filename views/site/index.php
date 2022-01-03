@@ -38,3 +38,5 @@ use app\models\mgcms\db\Project;
 <?= $this->render('index/section1') ?>
 
 <?= $this->render('index/roadmap') ?>
+
+<?= $this->render('/common/team') ?>
