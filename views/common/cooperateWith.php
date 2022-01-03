@@ -8,17 +8,13 @@ if (MgHelpers::getSetting('home - wspolpracujemy obrazki') == '') {
 
 ?>
 
-<section class="Section Partners">
+<section class="partners-wrapper">
     <div class="container">
-        <h1><?= Yii::t('db', 'Partners'); ?>
-            <div id="partnersNav" class="Custom-nav"></div>
-        </h1>
-        <div class="Partners__carousel owl-carousel">
+        <h2 class="text-center"><?= Yii::t('db', 'Partners'); ?></h2>
+        <div id="PARTNERS" class="partners owl-carousel owl-theme">
             <? foreach (MgHelpers::getSettingsArray('home - wspolpracujemy obrazki',false) as $fileUrl): ?>
-                <div class="item Partners__item">
-                    <a class="Partners__item__link" href="javascript:document">
-                        <img class="Partners__item__link__logo" src="<?=$fileUrl?>"/>
-                    </a>
+                <div class="item partners__item">
+                    <img class="Partners__item__link__logo" src="<?=$fileUrl?>"/>
                 </div>
             <? endforeach; ?>
         </div>

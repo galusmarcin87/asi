@@ -1,30 +1,14 @@
 <?
 /* @var $model app\models\mgcms\db\FaqItem */
-
 ?>
 
-<div class="Accordion__card">
-    <a
-            class="Accordion__card__header collapsed"
-            role="tab"
-            id="heading-<?= $model->id ?>"
-            data-toggle="collapse"
-            href="#collapse-<?= $model->id ?>"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-    >
-        <div><?= $model->question ?></div>
-    </a>
-
-    <div
-            id="collapse-<?= $model->id ?>"
-            class="Accordion__card__collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading-<?= $model->id ?>"
-            data-parent="#accordion"
-    >
-        <div class="Accordion__card__body" style="display: none">
-            <?= $model->answer ?>
+<div class="faq__item">
+    <?= $model->question ?>
+    <div class="faq__area <?= $index === 0 ? 'faq__item--active' : ''?>">
+        <div class="faq__desc">
+            <p>
+                <?= $model->answer ?>
+            </p>
         </div>
     </div>
 </div>

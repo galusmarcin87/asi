@@ -40,3 +40,7 @@ use app\models\mgcms\db\Project;
 <?= $this->render('index/roadmap') ?>
 
 <?= $this->render('/common/team') ?>
+
+<?= $this->render('/common/cooperateWith') ?>
+
+<?= $this->render('/common/faq') ?>

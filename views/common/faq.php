@@ -10,24 +10,15 @@ if (!$faq) {
 
 ?>
 
-
-<section class="Section  Section--light-background">
-    <div class="container  ">
-        <h1 class="text-center"><?= Yii::t('db', 'FAQ'); ?></h1>
-        <div
-                class="Accordion"
-                id="accordion_custom"
-                role="tablist"
-        >
-            <div class="Accordion__tabs">
-                <? foreach ($faq->faqItems as $item): ?>
-                    <?= $this->render('/faq/_index',['model' => $item])?>
-
+<section class="faq-wrapper">
+    <div class="container">
+        <h2 class="text-center"><?= Yii::t('db', 'FAQ') ?></h2>
+        <div id="FAQ" class="faq">
+            <div class="faq__list">
+                <? foreach ($faq->faqItems as $index => $item): ?>
+                    <?= $this->render('/faq/_index',['model' => $item, 'index' => $index]) ?>
                 <? endforeach; ?>
-
-
             </div>
-            <div class="Accordion__text"></div>
         </div>
     </div>
 </section>
