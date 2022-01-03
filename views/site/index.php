@@ -36,3 +36,5 @@ use app\models\mgcms\db\Project;
 </section>
 
 <?= $this->render('index/section1') ?>
+
+<?= $this->render('index/roadmap') ?>
